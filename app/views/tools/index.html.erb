@@ -1,0 +1,8 @@
+<h1>All yo tools</h1>
+
+<%= link_to "Add New Tool", new_tool_path %>
+
+<% @tools.each do |tool| %>
+  <p><%= link_to "#{tool.name}", tool_path(tool.id) %>
+     - <%= tool.quantity %></p>
+<% end %>
